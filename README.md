@@ -1,4 +1,4 @@
-# DELL Optiplex 5080 黑苹果
+# DELL Optiplex 5080 Tower Hackintosh
 
 ![Screenshot](images/screenshot.png)
 
@@ -10,7 +10,7 @@
 
 * CPU: Intel® Core™ i7-10700 处理器
 * 核显: Intel® UHD Graphics 630
-* 内存: 16GB DDR4 2666 单通道
+* 内存: 16GB DDR4 2933 单通道
 * 固态硬盘: 闪迪 Ultra 3D SATA SSD 1TB
 * Wi-Fi & 蓝牙: 暂无
 * 声卡: Realtek ALC256
@@ -36,10 +36,11 @@
 
 ### 未出现在BIOS设置页面的配置
 
-需要使用 [Modified Grub Shell](https://github.com/datasone/grub-mod-setup_var) 设置以下BIOS设置项：
+需要使用 [Ru.efi](http://ruexe.blogspot.com/) 设置以下BIOS设置项：
+> Ru.efi 必须直接作为主机启动后的第一个 EFI 程序启动，而不能添加为 OpenCore 的工具程序后再从 OpenCore 菜单启动，否则将会看不到设置项。
 
-* 设置预分配 DVMT 为 64M。该设置项默认为 32M。
-* 禁用 CFG 锁。禁用后可将 config.plist 中 ```Kernel->Quirks->AppleXcpmCfgLock``` 设为False。
+* 设置预分配 DVMT 为 64M。设置项位于```SaSetup```EFI变量中，偏移值```0xF5```，设置值为```0x2```。
+* 禁用 CFG 锁。禁用后可将 config.plist 中 ```Kernel->Quirks->AppleXcpmCfgLock``` 设为False。设置项位于 ```CpuSetup``` EFI 变量中，偏移值 ```0x3E```，设置值为 ```0x0```。
 
 ## 其他修改
 
