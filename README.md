@@ -12,7 +12,7 @@
 * 核显: Intel® UHD Graphics 630
 * 内存: 16GB DDR4 2933 单通道
 * 固态硬盘: 闪迪 Ultra 3D SATA SSD 1TB
-* Wi-Fi & 蓝牙: DW1820A (BCM94350ZAE)
+* Wi-Fi & 蓝牙: BCM94360Z3
 * 声卡: Realtek ALC256
 
 ### 正常工作
@@ -21,14 +21,12 @@
 * 绝大部分 USB 接口（已定制USB）
 * 有线网
 * WiFi
-* 隔空投送
+* 隔空投送、接力、随航等
 * 内置扬声器 & 前后面板耳麦一体接口（麦克风功能需要额外软件支持）
 * 休眠
 
 ### 不能正常工作
 * 后背板最左边的USB 3.0接口的3.0功能（受限于macOS的USB端口数量限制）
-* 接力
-* 随航
 
 ## BIOS设置
 * System Configuration → SATA Operation: AHCI
